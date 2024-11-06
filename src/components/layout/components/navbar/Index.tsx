@@ -1,15 +1,25 @@
+import { DateTime } from 'luxon';
+import { useNavigate } from 'react-router-dom';
 import useAuthStore from '../../../../stores/authStore';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
   const { logout } = useAuthStore();
 
+  const handleLogoutClick = async () => {
+    await logout();
+    navigate('/');
+  };
+
   return (
-    <nav className='p-4 flex flex-row items-center justify-between'>
-      <h1 className='text-3xl'>VenSheets</h1>
+    <nav className='py-4 px-8 flex flex-row items-center justify-between bg-primary rounded-full'>
+      <h1 className='text-primary-content font-bold'>VenSheets</h1>
       <div className='flex flex-row items-center'>
+        <h2 className='text-primary-content'>{DateTime.now().toISODate()}</h2>
         <button
-          className='btn btn-primary btn-outline btn-sm ml-4'
-          onClick={logout}
+          className='btn btn-info text-info-content btn-outline btn-sm ml-4'
+          onClick={handleLogoutClick}
         >
           Log Out
         </button>

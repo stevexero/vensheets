@@ -40,49 +40,43 @@ const Login = () => {
   }, [username]);
 
   return (
-    <div className='w-screen h-screen grid grid-cols-3'>
-      <div className='bg-orange-100 p-4 xl:p-14 col-span-3 md:col-span-2 lg:col-span-1 flex items-center justify-center'>
-        <div className='h-full flex flex-col items-center justify-start'>
-          <div className='bg-white w-full p-8 rounded-lg shadow-2xl mt-8'>
-            <form
-              onSubmit={handleLogin}
-              className='w-full flex flex-col items-center'
-            >
-              <div className='w-full'>
-                <label className='label-text'>Username</label>
-                <input
-                  type='text'
-                  className='input input-bordered w-full'
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required
-                  autoComplete='username'
-                />
-              </div>
-              <div className='mt-4 w-full'>
-                <label className='label-text'>Password</label>
-                <input
-                  type='password'
-                  className='input input-bordered w-full'
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  placeholder='Enter your password'
-                  required
-                  autoComplete='current-password'
-                />
-              </div>
-              {error && <p className='text-red-500 mt-4'>{error}</p>}
-              <button
-                type='submit'
-                className='btn btn-block btn-error text-white mt-12'
-                disabled={loading}
-              >
-                {loading ? 'Signing in...' : 'Sign In'}
-              </button>
-            </form>
-          </div>
+    <div className='w-screen h-screen flex items-center justify-center'>
+      <form
+        onSubmit={handleLogin}
+        className='flex flex-col items-center bg-neutral p-8 rounded-xl'
+      >
+        <div className='w-full'>
+          <label className='label-text text-primary-content'>Username</label>
+          <input
+            type='text'
+            className='input input-bordered w-full'
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+            autoComplete='username'
+          />
         </div>
-      </div>
+        <div className='mt-4 w-full'>
+          <label className='label-text text-primary-content'>Password</label>
+          <input
+            type='password'
+            className='input input-bordered w-full'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder='Enter your password'
+            required
+            autoComplete='current-password'
+          />
+        </div>
+        {error && <p className='text-error mt-4'>{error}</p>}
+        <button
+          type='submit'
+          className='btn btn-block btn-primary mt-12'
+          disabled={loading}
+        >
+          {loading ? 'Signing in...' : 'Sign In'}
+        </button>
+      </form>
     </div>
   );
 };

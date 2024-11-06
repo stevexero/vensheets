@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className='p-4 text-right'>
+    <footer className='p-4 text-center md:text-right'>
       <p>
         2024 - {new Date().getFullYear()} - VenSheets -{' '}
         <a
