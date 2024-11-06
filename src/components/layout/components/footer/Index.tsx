@@ -4,7 +4,7 @@ const Footer = () => {
       <p>
         2024 - {new Date().getFullYear()} - VenSheets -{' '}
         <a
-          href='https://github.com/stevexero'
+          href='https://github.com/stevexero/vensheets'
           target='_blank'
           className='underline'
         >

@@ -69,7 +69,7 @@ const MissedOrLateDockAppointments = () => {
 
   return (
     <div className='w-full grid grid-cols-1 md:grid-cols-4 md:gap-4 lg:gap-8'>
-      <div className='md:col-span-2 xl:col-span-1 bg-neutral p-4 lg:p-8 rounded-2xl'>
+      <div className='md:col-span-2 xl:col-span-1 bg-neutral p-4 lg:p-8 rounded-2xl shadow-2xl'>
         <h1 className='lg:text-2xl font-bold mb-4 text-neutral-content'>
           Missed or Late Dock Appointments
         </h1>
@@ -319,7 +319,7 @@ const MissedOrLateDockAppointments = () => {
         </form>
       </div>
 
-      <div className='col-span-1 md:col-span-2 xl:col-span-3 justify-items-center lg:justify-items-end bg-warning p-4 lg:p-8 rounded-2xl max-h-96 mt-4 md:mt-0'>
+      <div className='col-span-1 md:col-span-2 xl:col-span-3 justify-items-center lg:justify-items-end bg-warning p-4 lg:p-8 rounded-2xl max-h-96 mt-4 md:mt-0 shadow-2xl'>
         <h2 className='text-xl font-semibold mb-4 text-warning-content'>
           Missed Appointments Table
         </h2>

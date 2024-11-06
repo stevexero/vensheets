@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='py-4 px-8 flex flex-row items-center justify-between bg-primary rounded-full'>
+    <nav className='py-4 px-8 flex flex-row items-center justify-between bg-primary rounded-full shadow-xl mb-4'>
       <h1 className='text-primary-content font-bold'>VenSheets</h1>
       <div className='flex flex-row items-center'>
         <h2 className='text-primary-content'>{DateTime.now().toISODate()}</h2>
